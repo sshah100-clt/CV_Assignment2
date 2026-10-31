@@ -1,0 +1,4 @@
+# B0 - Supervised baseline: classification loss only, trained from scratch.
+# Identical to Assignment 1's A12 (SimpleCNN, 128 px gray, crop + flip,
+# AdamW lr 2e-3 wd 0.05, cosine, 150 epochs).
+_base_: ../base.yaml

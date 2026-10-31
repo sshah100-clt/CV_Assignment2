@@ -1,0 +1,54 @@
+# Default settings. Every option is listed here; each experiment config
+# inherits these (through `_base_`) and changes only a few of them.
+# The defaults are the supervised baseline B0 = Assignment 1's best
+# from-scratch recipe (A12, 86.5% CV accuracy).
+data:
+  root: data
+  split_file: splits/folds.json   # 5 folds, stratified, duplicates kept together
+  fold: 0                         # validation fold, set by train.py / pretrain.py --fold
+  img_size: 128                   # all images are converted to gray (only Flower is in colour)
+  num_workers: 8                  # data-loading processes per run (sds-kaim has 128 cores)
+  label_fraction: 1.0             # < 1 keeps only this fraction of the labels of every class
+  augment:                        # supervised augmentation
+    random_resized_crop: [0.5, 1.0]
+    hflip: true
+
+model:
+  name: simple_cnn                # simple_cnn (A1's CNN, 1.2M parameters) or resnet18 (11.2M)
+  widths: [32, 64, 128, 256]      # simple_cnn: channels of the four stages
+  dropout: 0.0                    # before the linear classification head
+  init: null                      # encoder weights from pretrain.py, e.g. runs/p1_simclr/f{fold}_s{seed}/encoder.pt
+  freeze_encoder: false           # true: linear probe (only the head is trained)
+  head_bn: false                  # standardise the features before the head (linear probes)
+
+optim:                            # AdamW for the classifier
+  lr: 0.002
+  weight_decay: 0.05
+  encoder_lr_mult: 1.0            # encoder learning rate = lr x this
+
+train:
+  epochs: 150
+  warmup_epochs: 3                # then cosine decay to 0
+  batch_size: 64
+
+ssl:                              # the self-supervised objective (pretrain.py, and train.py if joint_weight > 0)
+  method: simclr                  # simclr or rotation
+  temperature: 0.2                # simclr: softmax temperature of the NT-Xent loss
+  proj_hidden: 512                # simclr: projector MLP hidden size
+  proj_dim: 128                   # simclr: projector output size
+  joint_weight: 0.0               # train.py: > 0 adds weight x SSL loss to the classification loss
+  augment:                        # one SSL view
+    crop_scale: [0.2, 1.0]        # random resized crop, fraction of the image area
+    hflip: true
+    jitter_p: 0.8                 # probability of brightness/contrast jitter
+    brightness: 0.4
+    contrast: 0.4
+    blur_p: 0.5                   # probability of Gaussian blur
+
+pretrain:                         # pretrain.py only
+  epochs: 500
+  warmup_epochs: 10
+  batch_size: 256                 # images per step (SimCLR: 2 x 256 views, 510 negatives each)
+  lr: 0.001
+  weight_decay: 0.0001
+  knn_every: 25                   # epochs between kNN evaluations on the validation fold

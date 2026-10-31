@@ -1,0 +1,5 @@
+# S1a - Linear probe of the SimCLR encoder (P1): quality of the representation
+# by itself. Same probe settings as S0.
+_base_: s0_random_probe.yaml
+model:
+  init: runs/p1_simclr/f{fold}_s{seed}/encoder.pt

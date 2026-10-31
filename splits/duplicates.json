@@ -1,0 +1,75 @@
+{
+ "train_groups": [
+  [
+   "Bedroom/image_0038.jpg",
+   "Bedroom/image_0154.jpg"
+  ],
+  [
+   "Bedroom/image_0040.jpg",
+   "Bedroom/image_0056.jpg"
+  ],
+  [
+   "Coast/image_0023.jpg",
+   "Coast/image_0062.jpg"
+  ],
+  [
+   "Flower/image_0090.jpg",
+   "Flower/image_0100.jpg"
+  ],
+  [
+   "Flower/image_0123.jpg",
+   "Flower/image_0151.jpg"
+  ],
+  [
+   "Flower/image_0188.jpg",
+   "Flower/image_0196.jpg"
+  ],
+  [
+   "Highway/image_0160.jpg",
+   "Highway/image_0166.jpg",
+   "Highway/image_0169.jpg"
+  ],
+  [
+   "Kitchen/image_0140.jpg",
+   "Kitchen/image_0158.jpg"
+  ],
+  [
+   "LivingRoom/image_0003.jpg",
+   "LivingRoom/image_0028.jpg"
+  ],
+  [
+   "LivingRoom/image_0004.jpg",
+   "LivingRoom/image_0030.jpg"
+  ],
+  [
+   "LivingRoom/image_0005.jpg",
+   "LivingRoom/image_0034.jpg"
+  ],
+  [
+   "LivingRoom/image_0027.jpg",
+   "LivingRoom/image_0289.jpg"
+  ],
+  [
+   "LivingRoom/image_0208.jpg",
+   "LivingRoom/image_0211.jpg"
+  ],
+  [
+   "LivingRoom/image_0269.jpg",
+   "LivingRoom/image_0286.jpg"
+  ]
+ ],
+ "test_in_train": {
+  "Bedroom/image_0104.jpg": [
+   "Bedroom/image_0110.jpg"
+  ],
+  "Coast/image_0063.jpg": [
+   "Coast/image_0055.jpg"
+  ],
+  "OpenCountry/image_0068.jpg": [
+   "OpenCountry/image_0074.jpg"
+  ],
+  "Street/image_0083.jpg": [
+   "Street/image_0053.jpg"
+  ]
+ }
+}

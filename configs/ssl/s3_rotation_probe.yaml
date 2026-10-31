@@ -1,0 +1,4 @@
+# S3a - Linear probe of the rotation-prediction encoder (P2).
+_base_: s0_random_probe.yaml
+model:
+  init: runs/p2_rotation/f{fold}_s{seed}/encoder.pt

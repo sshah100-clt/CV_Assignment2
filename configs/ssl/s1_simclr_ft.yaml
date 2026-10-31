@@ -1,0 +1,5 @@
+# S1b - SimCLR pretraining (P1), then full fine-tuning with exactly the B0
+# recipe. Only change vs B0: the encoder's initial weights.
+_base_: ../base.yaml
+model:
+  init: runs/p1_simclr/f{fold}_s{seed}/encoder.pt

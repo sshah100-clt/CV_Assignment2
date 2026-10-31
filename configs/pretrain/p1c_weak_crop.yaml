@@ -1,0 +1,7 @@
+# P1c - Augmentation ablation of P1 (one change): weak crops, 50-100% of the
+# area as in supervised training, instead of 20-100%. Do small, far-apart
+# crops (that must still be matched) teach part-to-whole relations?
+_base_: p1_simclr.yaml
+ssl:
+  augment:
+    crop_scale: [0.5, 1.0]

@@ -1,0 +1,18 @@
+{
+  "experiment": "s0_random_probe",
+  "kind": "classifier",
+  "fold": 4,
+  "seed": 0,
+  "final_train_acc": 0.46979166666666666,
+  "final_val_acc": 0.4416666626930237,
+  "labelled_images": 1920,
+  "params": 1176752,
+  "train_time_s": 100,
+  "overrides": [],
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.12.1+cu130",
+    "cuda": "13.0",
+    "device": "NVIDIA RTX A5000"
+  }
+}

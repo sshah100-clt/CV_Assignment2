@@ -1,0 +1,4 @@
+# S3b - Rotation pretraining (P2), then full fine-tuning with the B0 recipe.
+_base_: ../base.yaml
+model:
+  init: runs/p2_rotation/f{fold}_s{seed}/encoder.pt

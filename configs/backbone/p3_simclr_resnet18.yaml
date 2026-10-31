@@ -1,0 +1,4 @@
+# P3 - SimCLR pretraining (P1 settings) of the ResNet-18 encoder.
+_base_: ../pretrain/p1_simclr.yaml
+model:
+  name: resnet18

@@ -1,0 +1,20 @@
+{
+  "experiment": "p1_simclr",
+  "kind": "pretrain",
+  "fold": 1,
+  "seed": 2,
+  "method": "simclr",
+  "random_knn_acc": 0.3229166567325592,
+  "final_knn_acc": 0.7666666507720947,
+  "final_ssl_loss": 2.171715872628348,
+  "final_pretext_acc": 0.97265625,
+  "params": 1172640,
+  "train_time_s": 1763,
+  "overrides": [],
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.12.1+cu130",
+    "cuda": "13.0",
+    "device": "NVIDIA RTX A5000"
+  }
+}

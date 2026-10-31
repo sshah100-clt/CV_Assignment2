@@ -1,0 +1,18 @@
+{
+  "experiment": "j2_rotation_joint",
+  "kind": "classifier",
+  "fold": 2,
+  "seed": 2,
+  "final_train_acc": 1.0,
+  "final_val_acc": 0.862500011920929,
+  "labelled_images": 1920,
+  "params": 1176752,
+  "train_time_s": 1489,
+  "overrides": [],
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.12.1+cu130",
+    "cuda": "13.0",
+    "device": "NVIDIA RTX A5000"
+  }
+}

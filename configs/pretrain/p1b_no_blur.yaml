@@ -1,0 +1,5 @@
+# P1b - Augmentation ablation of P1 (one change): no Gaussian blur.
+_base_: p1_simclr.yaml
+ssl:
+  augment:
+    blur_p: 0.0

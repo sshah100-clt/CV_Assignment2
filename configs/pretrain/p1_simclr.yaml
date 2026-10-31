@@ -1,0 +1,5 @@
+# P1 - SimCLR pretraining of the B0 encoder on the training folds (no labels).
+# Views: crop 20-100% of the area, flip, brightness/contrast jitter, blur.
+_base_: ../base.yaml
+ssl:
+  method: simclr

@@ -1,0 +1,4 @@
+# R1 - SimCLR-pretrained ResNet-18 (P3), fine-tuned with the R0 recipe.
+_base_: r0_resnet18_supervised.yaml
+model:
+  init: runs/p3_simclr_resnet18/f{fold}_s{seed}/encoder.pt

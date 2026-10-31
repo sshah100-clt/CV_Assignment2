@@ -1,0 +1,53 @@
+data:
+  root: data
+  split_file: splits/folds.json
+  fold: 2
+  img_size: 128
+  num_workers: 8
+  label_fraction: 1.0
+  augment:
+    random_resized_crop:
+    - 0.5
+    - 1.0
+    hflip: true
+model:
+  name: simple_cnn
+  widths:
+  - 32
+  - 64
+  - 128
+  - 256
+  dropout: 0.0
+  init: null
+  freeze_encoder: false
+  head_bn: false
+optim:
+  lr: 0.002
+  weight_decay: 0.05
+  encoder_lr_mult: 1.0
+train:
+  epochs: 150
+  warmup_epochs: 3
+  batch_size: 64
+ssl:
+  method: simclr
+  temperature: 0.2
+  proj_hidden: 512
+  proj_dim: 128
+  joint_weight: 1.0
+  augment:
+    crop_scale:
+    - 0.2
+    - 1.0
+    hflip: true
+    jitter_p: 0.8
+    brightness: 0.4
+    contrast: 0.4
+    blur_p: 0.5
+pretrain:
+  epochs: 500
+  warmup_epochs: 10
+  batch_size: 256
+  lr: 0.001
+  weight_decay: 0.0001
+  knn_every: 25

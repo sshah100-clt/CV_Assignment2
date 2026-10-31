@@ -1,0 +1,17 @@
+class,oof_accuracy,most_often_predicted_as,times
+Bedroom,0.7467,LivingRoom,30
+Coast,0.9267,OpenCountry,9
+Flower,0.96,Forest,4
+Forest,0.94,OpenCountry,6
+Highway,0.9467,Street,4
+Industrial,0.7933,Store,10
+InsideCity,0.78,Street,10
+Kitchen,0.8733,LivingRoom,9
+LivingRoom,0.7667,Bedroom,15
+Mountain,0.98,OpenCountry,2
+Office,0.9533,Kitchen,3
+OpenCountry,0.78,Coast,20
+Store,0.9,Industrial,3
+Street,0.9333,InsideCity,4
+Suburb,0.9933,TallBuilding,1
+TallBuilding,0.9,Industrial,9

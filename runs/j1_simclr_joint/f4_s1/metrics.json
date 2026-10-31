@@ -1,0 +1,18 @@
+{
+  "experiment": "j1_simclr_joint",
+  "kind": "classifier",
+  "fold": 4,
+  "seed": 1,
+  "final_train_acc": 0.996875,
+  "final_val_acc": 0.8708333373069763,
+  "labelled_images": 1920,
+  "params": 1176752,
+  "train_time_s": 1387,
+  "overrides": [],
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.12.1+cu130",
+    "cuda": "13.0",
+    "device": "NVIDIA RTX A5000"
+  }
+}

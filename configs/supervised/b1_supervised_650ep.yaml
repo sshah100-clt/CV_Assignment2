@@ -1,0 +1,5 @@
+# B1 - Is any gain from SSL just more training? B0 trained for 650 epochs:
+# as many passes over the data as SimCLR pretraining (500) + fine-tuning (150).
+_base_: b0_supervised.yaml
+train:
+  epochs: 650

@@ -1,0 +1,5 @@
+# J2 - Joint training with rotation prediction instead of SimCLR: B0's
+# classification loss + 1.0 x rotation loss on one extra view.
+_base_: j1_simclr_joint.yaml
+ssl:
+  method: rotation

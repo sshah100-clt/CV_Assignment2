@@ -1,0 +1,9 @@
+# P2 - Rotation-prediction pretraining (RotNet): is a much simpler pretext task
+# as good as SimCLR? Same encoder, epochs and optimiser as P1; the view is
+# augmented the same way as one SimCLR view, then shown at 0/90/180/270 degrees.
+# 128 images x 4 rotations = 512 images per step, the same as SimCLR's 256 x 2 views.
+_base_: ../base.yaml
+ssl:
+  method: rotation
+pretrain:
+  batch_size: 128

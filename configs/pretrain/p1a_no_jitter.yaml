@@ -1,0 +1,7 @@
+# P1a - Augmentation ablation of P1 (one change): no brightness/contrast jitter.
+# Can two crops of an image then be matched by their intensity histograms
+# alone (the gray analogue of SimCLR's colour-histogram shortcut)?
+_base_: p1_simclr.yaml
+ssl:
+  augment:
+    jitter_p: 0.0

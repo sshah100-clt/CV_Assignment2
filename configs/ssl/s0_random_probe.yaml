@@ -1,0 +1,11 @@
+# S0 - Linear probe of a randomly initialised (untrained) encoder: the floor
+# that tells how much of a probe's accuracy SSL pretraining actually adds.
+_base_: ../base.yaml
+model:
+  freeze_encoder: true
+  head_bn: true
+optim:
+  lr: 0.01
+  weight_decay: 0.0
+train:
+  epochs: 100

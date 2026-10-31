@@ -1,0 +1,6 @@
+# J1 - Joint training from scratch: B0's classification loss + 1.0 x SimCLR loss
+# on two extra views of every labelled image (64 images, 126 negatives per
+# step), one shared encoder. Same epochs and optimiser as B0.
+_base_: ../base.yaml
+ssl:
+  joint_weight: 1.0

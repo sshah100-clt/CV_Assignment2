@@ -1,0 +1,20 @@
+subset,accuracy,images,ci95_low,ci95_high
+all,0.8725,400,0.8398,0.9052
+scenes_only,0.864,375,0.8293,0.8987
+without_train_duplicates,0.8712,396,0.8382,0.9042
+class: Bedroom,0.84,25,,
+class: Coast,0.96,25,,
+class: Flower,1.0,25,,
+class: Forest,0.88,25,,
+class: Highway,1.0,25,,
+class: Industrial,0.64,25,,
+class: InsideCity,0.76,25,,
+class: Kitchen,0.88,25,,
+class: LivingRoom,0.72,25,,
+class: Mountain,0.8,25,,
+class: Office,0.96,25,,
+class: OpenCountry,0.84,25,,
+class: Store,0.8,25,,
+class: Street,0.96,25,,
+class: Suburb,1.0,25,,
+class: TallBuilding,0.92,25,,

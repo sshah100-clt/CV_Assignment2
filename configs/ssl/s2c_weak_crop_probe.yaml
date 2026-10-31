@@ -1,0 +1,4 @@
+# S2c - Linear probe of the P1c encoder (same probe as S0 and S1a).
+_base_: s0_random_probe.yaml
+model:
+  init: runs/p1c_weak_crop/f{fold}_s{seed}/encoder.pt

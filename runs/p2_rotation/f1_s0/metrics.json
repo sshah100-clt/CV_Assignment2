@@ -1,0 +1,20 @@
+{
+  "experiment": "p2_rotation",
+  "kind": "pretrain",
+  "fold": 1,
+  "seed": 0,
+  "method": "rotation",
+  "random_knn_acc": 0.3375000059604645,
+  "final_knn_acc": 0.5333333611488342,
+  "final_ssl_loss": 0.06390651538968087,
+  "final_pretext_acc": 0.9805989583333333,
+  "params": 1172640,
+  "train_time_s": 2754,
+  "overrides": [],
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.12.1+cu130",
+    "cuda": "13.0",
+    "device": "NVIDIA RTX A5000"
+  }
+}

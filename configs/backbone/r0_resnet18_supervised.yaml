@@ -1,0 +1,5 @@
+# R0 - Does the backbone change the benefit of SSL? B0 with a randomly
+# initialised ResNet-18 (11.2M parameters, 10x the SimpleCNN) instead.
+_base_: ../base.yaml
+model:
+  name: resnet18

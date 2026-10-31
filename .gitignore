@@ -1,0 +1,15 @@
+# Data is not versioned (see README for how to obtain it)
+data
+data/
+
+# Checkpoints are large: published separately. Everything else in runs/
+# (configs, logs, metrics, curves, out-of-fold predictions) is small and
+# committed as the record of every experiment.
+*.pt
+*.pth
+
+__pycache__/
+.DS_Store
+
+# Course handout (instructor material, not redistributed)
+Assignment2.pdf
